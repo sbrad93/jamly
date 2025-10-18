@@ -1,0 +1,24 @@
+# Python files.
+*.pyc
+__pycache__/
+
+# Virtual env.
+venv/
+.venv/
+env/
+
+# IDE.
+.vscode/
+.idea/
+
+# Temp files.
+*.log
+*.tmp
+
+# Credentials.
+.env
+config.ini
+
+# Build artifacts.
+dist/
+build/
