@@ -24,7 +24,7 @@ def _get_auth() -> SpotifyOAuth:
     return SpotifyOAuth(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, scope=SCOPE)
 
 
-def _get_token_info() -> Any:
+def _get_token() -> Any:
     """Get session token info.
 
     Returns
@@ -62,7 +62,7 @@ def get_client() -> Optional[Spotify]:
     Spotify
         The client or None if user is not authenticated.
     """
-    token_info = _get_token_info()
+    token_info = _get_token()
     if token_info is None:
         return None
     return Spotify(auth=token_info["access_token"])
